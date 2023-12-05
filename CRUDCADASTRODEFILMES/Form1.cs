@@ -34,6 +34,11 @@ namespace CRUDCADASTRODEFILMES
             Cadastro.FrmSerie frmSerie = new Cadastro.FrmSerie();
             frmSerie.Show();
         }
+        private void MenuUsuarios_Click(object sender, EventArgs e)
+        {
+            Cadastro.FrmUsuario frmUsuario = new Cadastro.FrmUsuario();
+            frmUsuario.Show();
+        }
 
         private void MenuFilmesB_Click(object sender, EventArgs e)
         {
@@ -45,11 +50,6 @@ namespace CRUDCADASTRODEFILMES
         {
             Biblioteca.BbtcSerie bbtcSerie = new Biblioteca.BbtcSerie();
             bbtcSerie.Show();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

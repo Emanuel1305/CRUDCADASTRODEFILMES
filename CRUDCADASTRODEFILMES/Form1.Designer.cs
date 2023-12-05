@@ -70,22 +70,23 @@
             // MenuFilmes
             // 
             this.MenuFilmes.Name = "MenuFilmes";
-            this.MenuFilmes.Size = new System.Drawing.Size(119, 22);
+            this.MenuFilmes.Size = new System.Drawing.Size(180, 22);
             this.MenuFilmes.Text = "Filmes";
             this.MenuFilmes.Click += new System.EventHandler(this.MenuFilmes_Click);
             // 
             // MenuSeries
             // 
             this.MenuSeries.Name = "MenuSeries";
-            this.MenuSeries.Size = new System.Drawing.Size(119, 22);
+            this.MenuSeries.Size = new System.Drawing.Size(180, 22);
             this.MenuSeries.Text = "Séries";
             this.MenuSeries.Click += new System.EventHandler(this.MenuSeries_Click);
             // 
             // MenuUsuarios
             // 
             this.MenuUsuarios.Name = "MenuUsuarios";
-            this.MenuUsuarios.Size = new System.Drawing.Size(119, 22);
+            this.MenuUsuarios.Size = new System.Drawing.Size(180, 22);
             this.MenuUsuarios.Text = "Usuários";
+            this.MenuUsuarios.Click += new System.EventHandler(this.MenuUsuarios_Click);
             // 
             // MenuBlibioteca
             // 
@@ -99,14 +100,14 @@
             // MenuFilmesB
             // 
             this.MenuFilmesB.Name = "MenuFilmesB";
-            this.MenuFilmesB.Size = new System.Drawing.Size(108, 22);
+            this.MenuFilmesB.Size = new System.Drawing.Size(180, 22);
             this.MenuFilmesB.Text = "Filmes";
             this.MenuFilmesB.Click += new System.EventHandler(this.MenuFilmesB_Click);
             // 
             // MenuSeriesB
             // 
             this.MenuSeriesB.Name = "MenuSeriesB";
-            this.MenuSeriesB.Size = new System.Drawing.Size(108, 22);
+            this.MenuSeriesB.Size = new System.Drawing.Size(180, 22);
             this.MenuSeriesB.Text = "Séries";
             this.MenuSeriesB.Click += new System.EventHandler(this.MenuSeriesB_Click);
             // 
@@ -126,7 +127,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
