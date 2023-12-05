@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E7359FB-8F60-401F-8D8E-6EB4016F7555}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CRUDCADASTRODEFILMES</RootNamespace>
+    <AssemblyName>CRUDCADASTRODEFILMES</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.2.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector NET 8.2.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Biblioteca\BbtcFilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biblioteca\BbtcFilme.Designer.cs">
+      <DependentUpon>BbtcFilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Biblioteca\BbtcSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Biblioteca\BbtcSerie.Designer.cs">
+      <DependentUpon>BbtcSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\BLL\FilmeBLL.cs" />
+    <Compile Include="Cadastro\BLL\SerieBLL.cs" />
+    <Compile Include="Cadastro\DAL\Conexao.cs" />
+    <Compile Include="Cadastro\DAL\FilmeDAL.cs" />
+    <Compile Include="Cadastro\DAL\SerieDAL.cs" />
+    <Compile Include="Cadastro\FrmFilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FrmFilme.Designer.cs">
+      <DependentUpon>FrmFilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FrmSerie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FrmSerie.Designer.cs">
+      <DependentUpon>FrmSerie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\Model\Filme.cs" />
+    <Compile Include="Cadastro\Model\Serie.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Biblioteca\BbtcFilme.resx">
+      <DependentUpon>BbtcFilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Biblioteca\BbtcSerie.resx">
+      <DependentUpon>BbtcSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FrmFilme.resx">
+      <DependentUpon>FrmFilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FrmSerie.resx">
+      <DependentUpon>FrmSerie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\iconeArquivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ilustracao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ilustracao %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\poster.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fundologin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\filter_menu_outline_icon_139568.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\fundoinicial.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
